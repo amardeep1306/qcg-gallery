@@ -1,0 +1,551 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---- particles.js container ---- */
+#particles-js {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+/* Header Section Start */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  padding: 0 50px;
+  height: 85px;
+  width: 100vw;
+  z-index: 1000;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.scroll {
+  background-color: #c51b92;
+}
+.hamburger {
+  display: none;
+}
+img.qcg-logo {
+  height: 115px;
+  transition: all 0.5s ease;
+}
+ul.nav-ul {
+  list-style-type: none;
+}
+ul.nav-ul > li {
+  display: inline-block;
+  margin: 0 5px;
+  color: #fff;
+  font-size: 15px;
+  /* font-weight: 500; */
+}
+ul.nav-ul > li > a {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Ubuntu", sans-serif;
+  transition: color 100ms ease-in-out;
+  line-height: 20px;
+}
+ul.nav-ul > li > a:hover {
+  color: #c434b8;
+}
+.scroll ul.nav-ul > li > a:hover {
+  color: #000;
+}
+
+@media (max-width: 900px) {
+  .header {
+    padding: 1.3rem 5%;
+  }
+  img.qcg-logo {
+    height: 100px;
+  }
+  .scroll ul.nav-ul > li > a:hover {
+    color: #c434b8;
+  }
+
+  .hamburger {
+    position: relative;
+    display: block;
+    width: 30px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+  }
+  .hamburger .bar,
+  .hamburger:after,
+  .hamburger:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4.5px;
+    background-color: #fff;
+    margin: 6px 0px;
+    -webkit-transition: 0.4s;
+    transition: 0.3s;
+  }
+  .hamburger.is-active:before {
+    -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+    transform: rotate(-45deg) translate(-8px, 6px);
+  }
+  .hamburger.is-active:after {
+    -webkit-transform: rotate(45deg) translate(-9px, -8px);
+    transform: rotate(45deg) translate(-9px, -8px);
+  }
+  .hamburger.is-active .bar {
+    opacity: 0;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(50px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+    overflow: hidden;
+  }
+  .navbar.is-active {
+    height: 21rem;
+  }
+  .navbar .nav-ul li {
+    display: block;
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+
+  .highlights-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+/* Header Section End */
+
+/* Main Section Start */
+
+main {
+  margin-top: 85px;
+}
+.particle {
+  background: url("./assets/highlights-bg.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* Highlight Section Start */
+.highlights {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  padding: 30px;
+  width: 100vw;
+  min-height: 97vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 660px));
+  position: relative;
+  z-index: 1;
+}
+
+.highlights-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+  grid-gap: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.text-1 {
+  font-family: Ubuntu;
+  color: white;
+  font-size: 18px;
+}
+.text-2 {
+  color: white;
+  font-family: Ubuntu;
+  font-size: 25px;
+}
+
+/* Highlight Section End */
+
+/* Workshop Section Start */
+
+section.event-workshops {
+  height: 500px;
+}
+@media (max-width: 1290px) {
+  section.event-workshops {
+    height: 900px;
+  }
+}
+@media (max-width: 950px) {
+  section.event-workshops {
+    height: 1000px;
+  }
+}
+@media (max-width: 630px) {
+  section.event-workshops {
+    height: 1800px;
+  }
+}
+
+div.head {
+  padding: 0 50px;
+  height: 85px;
+  width: 100vw;
+  text-align: center;
+  z-index: 2;
+}
+
+h2.title-heading2 {
+  display: inline-block;
+  margin: 20px 0;
+  color: #c434b8;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 25px;
+  padding: 10px;
+  border-bottom: 2px solid #000;
+  font-weight: 550;
+}
+
+div.events {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  padding: 20px 0;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  column-gap: 30px;
+  row-gap: 30px;
+}
+
+/* Card Start*/
+.card {
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+}
+/* Card End*/
+
+.content {
+  padding: 10px;
+  line-height: 20px;
+}
+.highlight .content {
+  color: whitesmoke;
+  backdrop-filter: blur(50px);
+}
+
+img.thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  display: block;
+  margin: auto;
+}
+.detail {
+  display: none;
+}
+.more {
+  font-size: 0.9rem;
+  color: #c434b8;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.title {
+  font-weight: 550;
+}
+
+/* Discussion Section Start */
+
+div.discussion {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: #222;
+  color: white;
+}
+
+/* Desktop View */
+@media only screen and (min-width: 750px) {
+  .highlight {
+    transition: all 0.25s;
+  }
+  .highlight:hover {
+    transform: translateY(-20px);
+  }
+  .text-1 {
+    font-size: 25px;
+  }
+  .text-2 {
+    margin-top: 15px;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 700;
+  }
+
+  .card,
+  .highlight {
+    width: 300px;
+    height: 300px;
+  }
+
+  div.events > div > img,
+  .highlight > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    transition: 0.6s;
+  }
+
+  div.events > div:hover > img,
+  .highlight:hover > img {
+    transform: scale(1.1);
+  }
+
+  div.card > div.content {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    color: #fff;
+    opacity: 0;
+  }
+
+
+
+  /* Hover Effect Start*/
+  .highlight > div.content,
+  .discussion > div.content {
+    background-color: hsla(217, 29%, 9%, 1);
+    background: linear-gradient(
+      315deg,
+      hsla(217, 29%, 9%, 0.8),
+      hsla(34, 42%, 63%, 0.8) 100%
+    );
+    transition: 0.9s;
+  }
+  .workshop > div.content,
+  .hackathon > div.content {
+    background-color: hsla(305, 58%, 49%, 0.75);
+    background: linear-gradient(
+      315deg,
+      hsla(305, 58%, 49%, 0.75) 0%,
+      hsla(347, 94%, 48%, 0.75) 100%
+    );
+    transition: 0.6s;
+  }
+  .card:hover .content {
+    opacity: 1;
+  }
+
+  /* Hover Effect End*/
+
+  .card > div.content > h2.title {
+    font-weight: 750;
+    margin-bottom: 10px;
+  }
+  .card > div.content > p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  .detail {
+    display: block;
+  }
+  .more {
+    font-size: 0.9rem;
+    color: #c51b92;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 20px;
+    background: #ffffff;
+    transition: all 0.6s ease;
+  }
+  .more:hover {
+    color: #fff;
+    background: #c51b92;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .highlight .more,
+  .discussion .more {
+    font-size: 0.9rem;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 20px;
+    background: hsla(34, 42%, 63%, 0.5);
+    transition: all 0.6s ease;
+  }
+  .highlight .more:hover,
+  .discussion .more:hover {
+    color: #10151d;
+    background: rgba(113, 121, 152, 0.5);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.event-discussion {
+  height: 950px;
+  background: black;
+}
+@media (min-width: 630px) {
+  .event-discussion {
+    height: 550px;
+  }
+}
+
+.event-discussion .title-heading2 {
+  border-bottom: 2px solid white;
+  border-radius: 2px;
+}
+
+/* Pop Up Section Start */
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 0px;
+  width: 0%;
+  height: 0%;
+  transform: translateY(-50%);
+  background: linear-gradient(
+    315deg,
+    hsla(305, 58%, 49%, 0.65) 0%,
+    hsla(347, 94%, 48%, 0.65) 100%
+  );
+  backdrop-filter: blur(50px);
+  overflow-x: hidden;
+  z-index: 2;
+}
+.popup-dark {
+  background-color: hsla(305, 69%, 6%, 0.75);
+  background: linear-gradient(
+    315deg,
+    hsla(217, 29%, 9%, 0.8),
+    hsla(34, 42%, 63%, 0.8) 100%
+  );
+}
+.popup .content {
+  position: relative;
+  top: 90px;
+  padding: 30px 20px;
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+  opacity: 0;
+  z-index: 3;
+}
+.popup .content .popup-close-btn {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 35px;
+  color: #ffffff;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.popup .content .popup-close-btn:hover {
+  background: #c51b92;
+}
+.popup .content h2 {
+  font-size: 30px;
+  line-height: 30px;
+  margin: 20px 0px;
+  color: #fff;
+}
+.popup .content p {
+  margin-bottom: 10px;
+  color: whitesmoke;
+}
+
+.popup.active {
+  animation: popupAnimation 500ms ease-in-out forwards;
+}
+.popup.active .content {
+  opacity: 1;
+  transition: all 80ms ease-in-out 500ms;
+}
+@keyframes popupAnimation {
+  0% {
+    width: 0%;
+    height: 0%;
+  }
+  50% {
+    width: 100%;
+    height: 2px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Pop Up Section End */
