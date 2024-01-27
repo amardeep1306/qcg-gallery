@@ -60,6 +60,7 @@ ul.nav-ul > li {
   /* font-weight: 500; */
 }
 ul.nav-ul > li > a {
+  position: relative;
   display: block;
   color: white;
   text-align: center;
@@ -68,6 +69,31 @@ ul.nav-ul > li > a {
   transition: color 100ms ease-in-out;
   line-height: 20px;
 }
+
+.navbar .nav-item .nav-link::before {
+  content: '';
+  transition: all .5s ease;
+  position: absolute;
+  bottom: -7px;
+  height: 0;
+  width: 0;
+  background: #ddd;
+  transform: all .5s ease;
+}
+
+.navbar .nav-item .nav-link:hover::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 20px;
+  bottom: -4px;
+}
+.navbar .nav-item .nav-link.active::before {
+  height: 2px;
+  width: 20px;
+  bottom: -4px;
+}
+
 ul.nav-ul > li > a:hover {
   color: #c434b8;
 }
