@@ -190,5 +190,7 @@ window.onload = function () {
       header.classList.remove("scroll");
       document.querySelector(".qcg-logo").src = "./assets/qcg-logo.png";
     }
+    menu_btn.classList.remove("is-active");
+    mobile_menu.classList.remove("is-active");
   });
 };
